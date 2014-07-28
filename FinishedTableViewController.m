@@ -1,38 +1,31 @@
 //
-//  InboxViewController.m
-//  TaleRecursion
+//  FinishedTableViewController.m
+//  TailRecursion
 //
 //  Created by Hing Huynh on 7/27/14.
-//  Copyright (c) 2014 Appcoders. All rights reserved.
+//  Copyright (c) 2014 Treehouse. All rights reserved.
 //
 
-#import "InboxViewController.h"
-#import "ContinueViewController.h"
+#import "FinishedTableViewController.h"
+#import "StoryViewController.h"
 
-@interface InboxViewController ()
+@interface FinishedTableViewController ()
 
 @end
 
-@implementation InboxViewController
+@implementation FinishedTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        NSLog(@"Current user: %@", currentUser.username);
-    }
-    else {
-        [self performSegueWithIdentifier:@"showLogin" sender:self];
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Story"];
-//    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
+    //    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
     [query orderByDescending:@"objectId"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
@@ -44,7 +37,7 @@
                 PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
                 [postQuery whereKey:@"story" equalTo:story];
                 [postQuery findObjectsInBackgroundWithBlock:^(NSArray *sentences, NSError *error) {
-
+                    
                     if ([sentences count] < 12){
                         
                         [array insertObject:story atIndex:[array count]];
@@ -56,9 +49,9 @@
                             [self.tableView reloadData];
                         }
                     }
-        
+                    
                 }];
-             
+                
             }
         }
     }];
@@ -94,7 +87,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
-        [self performSegueWithIdentifier:@"showContinue" sender:self];
+    [self performSegueWithIdentifier:@"showStory" sender:self];
 }
 
 - (IBAction)logout:(id)sender {
@@ -106,10 +99,10 @@
     if ([segue.identifier isEqualToString:@"showLogin"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
     }
-    else if ([segue.identifier isEqualToString:@"showContinue"]) {
+    else if ([segue.identifier isEqualToString:@"showStory"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-        ContinueViewController *continueViewController = (ContinueViewController *)segue.destinationViewController;
-        continueViewController.message = self.selectedMessage;
+        StoryViewController *storyViewController = (StoryViewController *)segue.destinationViewController;
+        storyViewController.message = self.selectedMessage;
     }
 }
 

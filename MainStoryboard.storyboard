@@ -19,6 +19,7 @@
                         <segue destination="SAM-QV-HdH" kind="relationship" relationship="viewControllers" id="OUg-hC-EVz"/>
                         <segue destination="zJh-fY-VOy" kind="relationship" relationship="viewControllers" id="yfc-p5-v3s"/>
                         <segue destination="y1S-gv-rLP" kind="relationship" relationship="viewControllers" id="y5K-Zn-MF2"/>
+                        <segue destination="oII-gw-Up8" kind="relationship" relationship="viewControllers" id="wso-so-5Tg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTa-e3-PLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,6 +459,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpP-TH-vNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="481" y="227"/>
+        </scene>
+        <!--Finished Table View Controller - Root View Controller-->
+        <scene sceneID="rTO-OO-kfF">
+            <objects>
+                <tableViewController id="zRS-eF-Sk4" customClass="FinishedTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8e4-aB-C5o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="9LF-82-oYi">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9LF-82-oYi" id="hDU-O1-2oD">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="1Cr-P2-UJN" kind="push" identifier="showStory" id="HRx-bm-IQn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zRS-eF-Sk4" id="ePc-45-uI5"/>
+                            <outlet property="delegate" destination="zRS-eF-Sk4" id="fJT-Ki-mxQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Nnq-UQ-Ozy"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uew-cl-PVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="1430"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="QqX-SF-3Nb">
+            <objects>
+                <viewController id="1Cr-P2-UJN" customClass="StoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NRr-95-s7g"/>
+                        <viewControllerLayoutGuide type="bottom" id="6bx-VF-v1V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OPs-vi-SAk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v8w-wQ-F9W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZK-Qn-pfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="1430"/>
+        </scene>
+        <!--Navigation Controller - Finished Stories-->
+        <scene sceneID="rh0-3X-5Ik">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="oII-gw-Up8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Finished Stories" id="HUj-3n-Xcb"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bzh-iB-euo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zRS-eF-Sk4" kind="relationship" relationship="rootViewController" id="V02-hJ-Ayz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmd-Y6-kzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="1430"/>
         </scene>
         <!--Navigation Controller - Create a Story-->
         <scene sceneID="71O-a1-4Dh">

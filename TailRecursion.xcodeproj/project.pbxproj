@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		005A5D1619856F8A00088DCB /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1519856F8A00088DCB /* CreateViewController.m */; };
 		005A5D191985B26C00088DCB /* ContinueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D181985B26C00088DCB /* ContinueViewController.m */; };
+		005A5D1C19860A0E00088DCB /* FinishedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */; };
+		005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1E19860CA800088DCB /* StoryViewController.m */; };
 		8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */; };
 		8D2A01AD17AB0EEE00A43140 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01AB17AB0EEE00A43140 /* FriendsViewController.m */; };
 		8D5ED97817B04E060079548F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5ED97717B04E050079548F /* MediaPlayer.framework */; };
@@ -53,6 +55,10 @@
 		005A5D1519856F8A00088DCB /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewController.m; path = ../CreateViewController.m; sourceTree = "<group>"; };
 		005A5D171985B26C00088DCB /* ContinueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContinueViewController.h; path = ../ContinueViewController.h; sourceTree = "<group>"; };
 		005A5D181985B26C00088DCB /* ContinueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContinueViewController.m; path = ../ContinueViewController.m; sourceTree = "<group>"; };
+		005A5D1A19860A0E00088DCB /* FinishedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FinishedTableViewController.h; path = ../FinishedTableViewController.h; sourceTree = "<group>"; };
+		005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FinishedTableViewController.m; path = ../FinishedTableViewController.m; sourceTree = "<group>"; };
+		005A5D1D19860CA800088DCB /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryViewController.h; path = ../StoryViewController.h; sourceTree = "<group>"; };
+		005A5D1E19860CA800088DCB /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryViewController.m; path = ../StoryViewController.m; sourceTree = "<group>"; };
 		8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
 		8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
 		8D2A01AA17AB0EEE00A43140 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
@@ -178,6 +184,8 @@
 				005A5D181985B26C00088DCB /* ContinueViewController.m */,
 				8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */,
 				8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */,
+				005A5D1A19860A0E00088DCB /* FinishedTableViewController.h */,
+				005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */,
 				8D2A01AA17AB0EEE00A43140 /* FriendsViewController.h */,
 				8D2A01AB17AB0EEE00A43140 /* FriendsViewController.m */,
 				8D5ED98117B052200079548F /* ImageViewController.h */,
@@ -188,6 +196,8 @@
 				8DCDADF217A82EEB008AAA28 /* LoginViewController.m */,
 				8DCDADEE17A82EC7008AAA28 /* SignupViewController.h */,
 				8DCDADEF17A82EC7008AAA28 /* SignupViewController.m */,
+				005A5D1D19860CA800088DCB /* StoryViewController.h */,
+				005A5D1E19860CA800088DCB /* StoryViewController.m */,
 				8DCDADB217A6B3CC008AAA28 /* Supporting Files */,
 			);
 			name = TailRecursion;
@@ -309,8 +319,10 @@
 				005A5D191985B26C00088DCB /* ContinueViewController.m in Sources */,
 				8DCDADF617A83853008AAA28 /* InboxViewController.m in Sources */,
 				8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */,
+				005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */,
 				8D2A01AD17AB0EEE00A43140 /* FriendsViewController.m in Sources */,
 				8D5ED98317B052200079548F /* ImageViewController.m in Sources */,
+				005A5D1C19860A0E00088DCB /* FinishedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
