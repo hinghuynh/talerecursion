@@ -476,9 +476,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="1Cr-P2-UJN" kind="push" identifier="showStory" id="jU0-km-0fe"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -487,6 +484,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Nnq-UQ-Ozy"/>
+                    <connections>
+                        <segue destination="1Cr-P2-UJN" kind="push" identifier="showStory" id="Bw5-vj-2dg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uew-cl-PVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

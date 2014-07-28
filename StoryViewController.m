@@ -7,6 +7,7 @@
 //
 
 #import "StoryViewController.h"
+#import "FinishedTableViewController.h"
 
 @interface StoryViewController ()
 
