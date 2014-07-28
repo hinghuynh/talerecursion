@@ -38,16 +38,18 @@
                 [postQuery whereKey:@"story" equalTo:story];
                 [postQuery findObjectsInBackgroundWithBlock:^(NSArray *sentences, NSError *error) {
                     
-                    if ([sentences count] < 12){
+                    if ([sentences count] >= 12){
                         
                         [array insertObject:story atIndex:[array count]];
                         NSLog(@"test %d", [array count]);
                         
-                        if ([objects lastObject] == story){
-                            self.messages = array;
-                            NSLog(@"%d", [array count]);
-                            [self.tableView reloadData];
-                        }
+                       
+                    }
+                    
+                    if ([objects lastObject] == story){
+                        self.messages = array;
+                        NSLog(@"%d", [array count]);
+                        [self.tableView reloadData];
                     }
                     
                 }];
@@ -88,21 +90,42 @@
 {
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"showStory" sender:self];
-}
+    PFQuery *query = [PFQuery queryWithClassName:@"Sentence"];
+    
+    
+    [query whereKey:@"story" equalTo:self.selectedMessage];
+    //    [query whereKey:@"objectId" equalTo:@"7ApcdVCpq"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
 
-- (IBAction)logout:(id)sender {
-    [PFUser logOut];
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            for(PFObject *sentence in objects){
+                [array insertObject:[sentence objectForKey:@"sentence"] atIndex:[array count]];
+                NSLog(@"test %d", [array count]);
+                
+                if ([objects lastObject] == sentence) {
+                    NSLog(@"test %d", [array count]);
+                    NSString *joinedString = [array componentsJoinedByString:@"  "];
+                    NSLog(@"test %@", joinedString);
+                    self.joinedString = joinedString;
+                }
+            }
+            
+            
+        }
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showLogin"]) {
-        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-    }
-    else if ([segue.identifier isEqualToString:@"showStory"]) {
+
+    if ([segue.identifier isEqualToString:@"showStory"]) {
+        
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
         StoryViewController *storyViewController = (StoryViewController *)segue.destinationViewController;
-        storyViewController.message = self.selectedMessage;
+
+        storyViewController.message = self.joinedString;
+        
     }
 }
 

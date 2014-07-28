@@ -11,7 +11,8 @@
 
 @interface StoryViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *storyLabel;
 
-@property (nonatomic, strong) PFObject *message;
+@property (nonatomic, strong) NSString *message;
 
 @end

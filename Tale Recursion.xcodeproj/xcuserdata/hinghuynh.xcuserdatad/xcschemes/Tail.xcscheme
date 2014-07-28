@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8DCDADA717A6B3CC008AAA28"
                BuildableName = "TailRecursion.app"
-               BlueprintName = "TailRecursion"
-               ReferencedContainer = "container:TailRecursion.xcodeproj">
+               BlueprintName = "Tale Recursion"
+               ReferencedContainer = "container:Tale Recursion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DCDADA717A6B3CC008AAA28"
             BuildableName = "TailRecursion.app"
-            BlueprintName = "TailRecursion"
-            ReferencedContainer = "container:TailRecursion.xcodeproj">
+            BlueprintName = "Tale Recursion"
+            ReferencedContainer = "container:Tale Recursion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DCDADA717A6B3CC008AAA28"
             BuildableName = "TailRecursion.app"
-            BlueprintName = "TailRecursion"
-            ReferencedContainer = "container:TailRecursion.xcodeproj">
+            BlueprintName = "Tale Recursion"
+            ReferencedContainer = "container:Tale Recursion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DCDADA717A6B3CC008AAA28"
             BuildableName = "TailRecursion.app"
-            BlueprintName = "TailRecursion"
-            ReferencedContainer = "container:TailRecursion.xcodeproj">
+            BlueprintName = "Tale Recursion"
+            ReferencedContainer = "container:Tale Recursion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

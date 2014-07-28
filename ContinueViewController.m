@@ -22,7 +22,7 @@
     
     PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
     
-    // Follow relationship
+       NSLog(@"THISDJSALKJDASLKDJASLKDJASLDK %@", self.message);
     [postQuery whereKey:@"story" equalTo:self.message];
     
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

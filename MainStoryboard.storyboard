@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-59" y="227"/>
         </scene>
-        <!--Login View Controller - TailRecursion-->
+        <!--Login View Controller - Tale Recursion-->
         <scene sceneID="jhv-qo-Efw">
             <objects>
                 <viewController id="BA1-Cp-RJu" customClass="LoginViewController" sceneMemberID="viewController">
@@ -107,7 +107,7 @@
                             <constraint firstItem="LtO-lO-faO" firstAttribute="top" secondItem="NRF-Ak-4Dc" secondAttribute="bottom" constant="8" symbolic="YES" id="ygs-IK-S4H"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TailRecursion" id="Xza-Tr-b7l"/>
+                    <navigationItem key="navigationItem" title="Tale Recursion" id="Xza-Tr-b7l"/>
                     <connections>
                         <outlet property="passwordField" destination="LtO-lO-faO" id="rSb-1I-Y0G"/>
                         <outlet property="usernameField" destination="NRF-Ak-4Dc" id="y7s-w5-eCh"/>
@@ -193,8 +193,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This will be the Previous Sentence." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAW-xO-j6O">
-                                <rect key="frame" x="20" y="61" width="280" height="57"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter the desire title and the first sentence of your story." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="275" translatesAutoresizingMaskIntoConstraints="NO" id="QAW-xO-j6O">
+                                <rect key="frame" x="20" y="68" width="275" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -319,7 +319,7 @@
             </objects>
             <point key="canvasLocation" x="1408" y="-947"/>
         </scene>
-        <!--Inbox View Controller - TailRecursion-->
+        <!--Inbox View Controller - Tale Recursion-->
         <scene sceneID="K2q-hk-Jwk">
             <objects>
                 <tableViewController id="4uG-zQ-ztV" customClass="InboxViewController" sceneMemberID="viewController">
@@ -342,7 +342,7 @@
                             <outlet property="delegate" destination="4uG-zQ-ztV" id="A6l-wn-hxl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TailRecursion" id="ao4-kE-he2">
+                    <navigationItem key="navigationItem" title="Tale Recursion" id="ao4-kE-he2">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="D3W-5L-cIi">
                             <connections>
                                 <action selector="logout:" destination="4uG-zQ-ztV" id="L7V-9m-1y3"/>
@@ -358,7 +358,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-350"/>
         </scene>
-        <!--Signup View Controller - TailRecursion-->
+        <!--Signup View Controller - Tale Recursion-->
         <scene sceneID="aBP-V4-woW">
             <objects>
                 <viewController id="EZc-59-qKm" customClass="SignupViewController" sceneMemberID="viewController">
@@ -411,7 +411,7 @@
                             <constraint firstItem="jor-yE-8rP" firstAttribute="top" secondItem="Eqo-hT-l2U" secondAttribute="bottom" constant="8" symbolic="YES" id="uuO-Ki-dJf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TailRecursion" id="86g-jc-CQe"/>
+                    <navigationItem key="navigationItem" title="Tale Recursion" id="86g-jc-CQe"/>
                     <connections>
                         <outlet property="emailField" destination="9pk-dW-1XS" id="RaH-Qx-dNZ"/>
                         <outlet property="passwordField" destination="jor-yE-8rP" id="lbk-f3-mru"/>
@@ -477,7 +477,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1Cr-P2-UJN" kind="push" identifier="showStory" id="HRx-bm-IQn"/>
+                                    <segue destination="1Cr-P2-UJN" kind="push" identifier="showStory" id="jU0-km-0fe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -503,13 +503,25 @@
                     <view key="view" contentMode="scaleToFill" id="OPs-vi-SAk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="meN-5d-FDS">
+                                <rect key="frame" x="20" y="76" width="280" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="v8w-wQ-F9W"/>
+                    <connections>
+                        <outlet property="storyLabel" destination="meN-5d-FDS" id="COS-3x-nYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZK-Qn-pfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="1430"/>
+            <point key="canvasLocation" x="1446" y="1430"/>
         </scene>
         <!--Navigation Controller - Finished Stories-->
         <scene sceneID="rh0-3X-5Ik">

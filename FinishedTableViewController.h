@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSArray *messages;
 @property (nonatomic, strong) PFObject *message;
 @property (nonatomic, strong) PFObject *selectedMessage;
+@property (nonatomic, strong) NSString *joinedString;
 
 @end

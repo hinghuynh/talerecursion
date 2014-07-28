@@ -46,15 +46,14 @@
                 [postQuery findObjectsInBackgroundWithBlock:^(NSArray *sentences, NSError *error) {
 
                     if ([sentences count] < 12){
-                        
                         [array insertObject:story atIndex:[array count]];
                         NSLog(@"test %d", [array count]);
-                        
-                        if ([objects lastObject] == story){
-                            self.messages = array;
-                            NSLog(@"%d", [array count]);
-                            [self.tableView reloadData];
-                        }
+                    }
+                    
+                    if ([objects lastObject] == story){
+                        self.messages = array;
+                        NSLog(@"%d", [array count]);
+                        [self.tableView reloadData];
                     }
         
                 }];
