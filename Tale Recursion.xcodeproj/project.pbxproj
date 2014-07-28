@@ -11,6 +11,7 @@
 		005A5D191985B26C00088DCB /* ContinueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D181985B26C00088DCB /* ContinueViewController.m */; };
 		005A5D1C19860A0E00088DCB /* FinishedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */; };
 		005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1E19860CA800088DCB /* StoryViewController.m */; };
+		21CAA18B1986FD9E008B31E6 /* sampl-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */; };
 		8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */; };
 		8D2A01AD17AB0EEE00A43140 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01AB17AB0EEE00A43140 /* FriendsViewController.m */; };
 		8D5ED97817B04E060079548F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5ED97717B04E050079548F /* MediaPlayer.framework */; };
@@ -58,6 +59,7 @@
 		005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FinishedTableViewController.m; path = ../FinishedTableViewController.m; sourceTree = "<group>"; };
 		005A5D1D19860CA800088DCB /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryViewController.h; path = ../StoryViewController.h; sourceTree = "<group>"; };
 		005A5D1E19860CA800088DCB /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryViewController.m; path = ../StoryViewController.m; sourceTree = "<group>"; };
+		21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sampl-image.jpg"; sourceTree = "<group>"; };
 		8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
 		8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
 		8D2A01AA17AB0EEE00A43140 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				8DCDADF717A83870008AAA28 /* camera.png */,
 				8DCDADF817A83870008AAA28 /* camera@2x.png */,
 				8DCDADF917A83870008AAA28 /* friends.png */,
+				21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */,
 				8DCDADFA17A83870008AAA28 /* friends@2x.png */,
 				8D5ED97917B052130079548F /* icon_image.png */,
 				8D5ED97A17B052130079548F /* icon_image@2x.png */,
@@ -297,6 +300,7 @@
 				8DCDAE0017A83870008AAA28 /* friends@2x.png in Resources */,
 				8DCDAE0117A83870008AAA28 /* inbox.png in Resources */,
 				8DCDAE0217A83870008AAA28 /* inbox@2x.png in Resources */,
+				21CAA18B1986FD9E008B31E6 /* sampl-image.jpg in Resources */,
 				8D5ED97D17B052130079548F /* icon_image.png in Resources */,
 				8D5ED97E17B052130079548F /* icon_image@2x.png in Resources */,
 				8D5ED97F17B052130079548F /* icon_video.png in Resources */,

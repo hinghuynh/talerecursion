@@ -20,6 +20,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sampl-image.jpg"]];
 }
 
 - (IBAction)signup:(id)sender {

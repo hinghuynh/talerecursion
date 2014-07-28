@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hdx-au-269">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hdx-au-269">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -181,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="1408" y="227"/>
         </scene>
-        <!--Create View Controller-->
+        <!--Create View Controller - New Story-->
         <scene sceneID="4dU-QY-DGM">
             <objects>
                 <viewController id="8IP-jO-Ual" customClass="CreateViewController" sceneMemberID="viewController">
@@ -225,7 +225,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DUf-qN-v2o"/>
+                    <navigationItem key="navigationItem" title="New Story" id="X7R-pp-UQb"/>
                     <connections>
                         <outlet property="sentenceField" destination="7vJ-rp-gRs" id="opF-CR-aM2"/>
                         <outlet property="titleField" destination="ivk-jQ-cJU" id="bNH-qt-Z5I"/>
@@ -461,7 +461,7 @@
             </objects>
             <point key="canvasLocation" x="481" y="227"/>
         </scene>
-        <!--Finished Table View Controller - Root View Controller-->
+        <!--Finished Table View Controller - Finished Stories-->
         <scene sceneID="rTO-OO-kfF">
             <objects>
                 <tableViewController id="zRS-eF-Sk4" customClass="FinishedTableViewController" sceneMemberID="viewController">
@@ -484,7 +484,7 @@
                             <outlet property="delegate" destination="zRS-eF-Sk4" id="fJT-Ki-mxQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Nnq-UQ-Ozy"/>
+                    <navigationItem key="navigationItem" title="Finished Stories" id="Nnq-UQ-Ozy"/>
                     <connections>
                         <segue destination="1Cr-P2-UJN" kind="push" identifier="showStory" id="Bw5-vj-2dg"/>
                     </connections>
