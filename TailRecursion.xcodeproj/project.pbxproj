@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		005A5D1619856F8A00088DCB /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1519856F8A00088DCB /* CreateViewController.m */; };
-		005A5D191985B26C00088DCB /* ContinueStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D181985B26C00088DCB /* ContinueStoryViewController.m */; };
+		005A5D191985B26C00088DCB /* ContinueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D181985B26C00088DCB /* ContinueViewController.m */; };
 		8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */; };
 		8D2A01AD17AB0EEE00A43140 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01AB17AB0EEE00A43140 /* FriendsViewController.m */; };
 		8D5ED97817B04E060079548F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5ED97717B04E050079548F /* MediaPlayer.framework */; };
@@ -51,8 +51,8 @@
 /* Begin PBXFileReference section */
 		005A5D1419856F8A00088DCB /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewController.h; path = ../CreateViewController.h; sourceTree = "<group>"; };
 		005A5D1519856F8A00088DCB /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewController.m; path = ../CreateViewController.m; sourceTree = "<group>"; };
-		005A5D171985B26C00088DCB /* ContinueStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContinueStoryViewController.h; path = ../ContinueStoryViewController.h; sourceTree = "<group>"; };
-		005A5D181985B26C00088DCB /* ContinueStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContinueStoryViewController.m; path = ../ContinueStoryViewController.m; sourceTree = "<group>"; };
+		005A5D171985B26C00088DCB /* ContinueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContinueViewController.h; path = ../ContinueViewController.h; sourceTree = "<group>"; };
+		005A5D181985B26C00088DCB /* ContinueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContinueViewController.m; path = ../ContinueViewController.m; sourceTree = "<group>"; };
 		8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
 		8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
 		8D2A01AA17AB0EEE00A43140 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
@@ -174,8 +174,8 @@
 				8DCDADBB17A6B3CC008AAA28 /* AppDelegate.m */,
 				005A5D1419856F8A00088DCB /* CreateViewController.h */,
 				005A5D1519856F8A00088DCB /* CreateViewController.m */,
-				005A5D171985B26C00088DCB /* ContinueStoryViewController.h */,
-				005A5D181985B26C00088DCB /* ContinueStoryViewController.m */,
+				005A5D171985B26C00088DCB /* ContinueViewController.h */,
+				005A5D181985B26C00088DCB /* ContinueViewController.m */,
 				8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */,
 				8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */,
 				8D2A01AA17AB0EEE00A43140 /* FriendsViewController.h */,
@@ -306,7 +306,7 @@
 				005A5D1619856F8A00088DCB /* CreateViewController.m in Sources */,
 				8DCDADF017A82EC7008AAA28 /* SignupViewController.m in Sources */,
 				8DCDADF317A82EEB008AAA28 /* LoginViewController.m in Sources */,
-				005A5D191985B26C00088DCB /* ContinueStoryViewController.m in Sources */,
+				005A5D191985B26C00088DCB /* ContinueViewController.m in Sources */,
 				8DCDADF617A83853008AAA28 /* InboxViewController.m in Sources */,
 				8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */,
 				8D2A01AD17AB0EEE00A43140 /* FriendsViewController.m in Sources */,

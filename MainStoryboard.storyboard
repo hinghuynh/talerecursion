@@ -263,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="1408" y="809"/>
         </scene>
-        <!--Continue Story View Controller-->
+        <!--Continue View Controller-->
         <scene sceneID="o0y-4h-PgL">
             <objects>
-                <viewController id="Pqw-Hd-fOp" customClass="ContinueStoryViewController" sceneMemberID="viewController">
+                <viewController id="Pqw-Hd-fOp" customClass="ContinueViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vag-t3-7Oq"/>
                         <viewControllerLayoutGuide type="bottom" id="NCY-6U-6vF"/>
@@ -276,14 +276,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkv-wo-Fze">
-                                <rect key="frame" x="20" y="123" width="280" height="109"/>
+                                <rect key="frame" x="20" y="123" width="280" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqr-Z7-Br5">
-                                <rect key="frame" x="20" y="265" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Please type in a Sentence" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqr-Z7-Br5">
+                                <rect key="frame" x="20" y="225" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -350,7 +350,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="BA1-Cp-RJu" kind="push" identifier="showLogin" id="hI1-kG-rSa"/>
-                        <segue destination="Pqw-Hd-fOp" kind="push" identifier="showImage" id="gnX-al-zpx"/>
+                        <segue destination="Pqw-Hd-fOp" kind="push" identifier="showContinue" id="gnX-al-zpx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Haq-D9-wB8" userLabel="First Responder" sceneMemberID="firstResponder"/>

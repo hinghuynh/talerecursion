@@ -7,7 +7,7 @@
 //
 
 #import "InboxViewController.h"
-#import "ImageViewController.h"
+#import "ContinueViewController.h"
 
 @interface InboxViewController ()
 
@@ -77,7 +77,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.selectedMessage = [self.messages objectAtIndex:indexPath.row];
-        [self performSegueWithIdentifier:@"showStory" sender:self];
+        [self performSegueWithIdentifier:@"showContinue" sender:self];
 }
 
 - (IBAction)logout:(id)sender {
@@ -89,10 +89,10 @@
     if ([segue.identifier isEqualToString:@"showLogin"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
     }
-    else if ([segue.identifier isEqualToString:@"showStory"]) {
+    else if ([segue.identifier isEqualToString:@"showContinue"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
-//        ImageViewController *imageViewController = (ImageViewController *)segue.destinationViewController;
-//        imageViewController.message = self.selectedMessage;
+        ContinueViewController *continueViewController = (ContinueViewController *)segue.destinationViewController;
+        continueViewController.message = self.selectedMessage;
     }
 }
 
