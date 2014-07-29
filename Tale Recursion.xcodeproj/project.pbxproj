@@ -11,6 +11,7 @@
 		005A5D191985B26C00088DCB /* ContinueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D181985B26C00088DCB /* ContinueViewController.m */; };
 		005A5D1C19860A0E00088DCB /* FinishedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */; };
 		005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1E19860CA800088DCB /* StoryViewController.m */; };
+		104D911319883C3B00A96F5A /* NotifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D911219883C3B00A96F5A /* NotifyTableViewController.m */; };
 		215EF3CC1987E8870087EDF1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215EF3CB1987E8870087EDF1 /* AVFoundation.framework */; };
 		21CAA18B1986FD9E008B31E6 /* sampl-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */; };
 		8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */; };
@@ -60,6 +61,8 @@
 		005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FinishedTableViewController.m; path = ../FinishedTableViewController.m; sourceTree = "<group>"; };
 		005A5D1D19860CA800088DCB /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryViewController.h; path = ../StoryViewController.h; sourceTree = "<group>"; };
 		005A5D1E19860CA800088DCB /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryViewController.m; path = ../StoryViewController.m; sourceTree = "<group>"; };
+		104D911119883C3B00A96F5A /* NotifyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotifyTableViewController.h; path = ../NotifyTableViewController.h; sourceTree = "<group>"; };
+		104D911219883C3B00A96F5A /* NotifyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotifyTableViewController.m; path = ../NotifyTableViewController.m; sourceTree = "<group>"; };
 		215EF3CB1987E8870087EDF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sampl-image.jpg"; sourceTree = "<group>"; };
 		8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				8DCDADF517A83852008AAA28 /* InboxViewController.m */,
 				8DCDADF117A82EEB008AAA28 /* LoginViewController.h */,
 				8DCDADF217A82EEB008AAA28 /* LoginViewController.m */,
+				104D911119883C3B00A96F5A /* NotifyTableViewController.h */,
+				104D911219883C3B00A96F5A /* NotifyTableViewController.m */,
 				8DCDADEE17A82EC7008AAA28 /* SignupViewController.h */,
 				8DCDADEF17A82EC7008AAA28 /* SignupViewController.m */,
 				005A5D1D19860CA800088DCB /* StoryViewController.h */,
@@ -329,6 +334,7 @@
 				8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */,
 				005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */,
 				8D2A01AD17AB0EEE00A43140 /* FriendsViewController.m in Sources */,
+				104D911319883C3B00A96F5A /* NotifyTableViewController.m in Sources */,
 				005A5D1C19860A0E00088DCB /* FinishedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         NSLog(@"Current user: %@", currentUser.username);
@@ -30,6 +29,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    PFUser *currentUser = [PFUser currentUser];
+    NSString *userChannel = (@"%@", currentUser.username);
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation addUniqueObject:userChannel forKey:@"channels"];
+    [currentInstallation saveInBackground];
     NSMutableArray *array = [[NSMutableArray alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:@"Story"];
 //    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
