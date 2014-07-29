@@ -15,6 +15,8 @@
 
 @implementation StoryViewController
 
+BOOL speechPaused = 0;
+
 
 
 - (void)viewDidLoad
@@ -22,6 +24,8 @@
 {
     [super viewDidLoad];
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
+    speechPaused = NO;
+    self.synthesizer.delegate = self;
 
     double delayInSeconds = 0.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -34,12 +38,32 @@
 
 - (IBAction)playPauseButtonPressed:(UIButton *)sender {
     [self.storyLabel resignFirstResponder];
-    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:self.storyLabel.text];
-    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
-    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-AU"];
-    [self.synthesizer speakUtterance:utterance];
-    
-    
+    if (speechPaused == NO) {
+        [self.playPauseButton setTitle:@"Pause" forState:UIControlStateNormal];
+        [self.synthesizer continueSpeaking];
+        speechPaused = YES;
+    } else {
+        [self.playPauseButton setTitle:@"Play" forState:UIControlStateNormal];
+        speechPaused = NO;
+        [self.synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    }
+    if (self.synthesizer.speaking == NO) {
+        AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:self.storyLabel.text];
+        [utterance setRate:0.15];
+        utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-AU"];
+        [self.synthesizer speakUtterance:utterance];
+    }
+}
+-(void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance {
+    [self.playPauseButton setTitle:@"Play" forState:UIControlStateNormal];
+    speechPaused = NO;
+    NSLog(@"Playback finished");
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
