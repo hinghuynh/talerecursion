@@ -11,6 +11,7 @@
 		005A5D191985B26C00088DCB /* ContinueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D181985B26C00088DCB /* ContinueViewController.m */; };
 		005A5D1C19860A0E00088DCB /* FinishedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */; };
 		005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1E19860CA800088DCB /* StoryViewController.m */; };
+		215EF3CC1987E8870087EDF1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215EF3CB1987E8870087EDF1 /* AVFoundation.framework */; };
 		21CAA18B1986FD9E008B31E6 /* sampl-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */; };
 		8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */; };
 		8D2A01AD17AB0EEE00A43140 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01AB17AB0EEE00A43140 /* FriendsViewController.m */; };
@@ -59,6 +60,7 @@
 		005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FinishedTableViewController.m; path = ../FinishedTableViewController.m; sourceTree = "<group>"; };
 		005A5D1D19860CA800088DCB /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryViewController.h; path = ../StoryViewController.h; sourceTree = "<group>"; };
 		005A5D1E19860CA800088DCB /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryViewController.m; path = ../StoryViewController.m; sourceTree = "<group>"; };
+		215EF3CB1987E8870087EDF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sampl-image.jpg"; sourceTree = "<group>"; };
 		8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
 		8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215EF3CC1987E8870087EDF1 /* AVFoundation.framework in Frameworks */,
 				8D5ED97817B04E060079548F /* MediaPlayer.framework in Frameworks */,
 				8DCDADE517A82CE5008AAA28 /* AudioToolbox.framework in Frameworks */,
 				8DCDADE617A82CE5008AAA28 /* CFNetwork.framework in Frameworks */,
@@ -154,6 +157,7 @@
 		8DCDADAA17A6B3CC008AAA28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				215EF3CB1987E8870087EDF1 /* AVFoundation.framework */,
 				8DCDADDC17A82CE5008AAA28 /* AudioToolbox.framework */,
 				8DCDADDD17A82CE5008AAA28 /* CFNetwork.framework */,
 				8DCDADAF17A6B3CC008AAA28 /* CoreGraphics.framework */,
@@ -411,8 +415,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ribbit/Tale Recursion-Prefix.pch";
 				INFOPLIST_FILE = "Ribbit/Tale Recursion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "Tale Recursion";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,8 +435,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ribbit/Tale Recursion-Prefix.pch";
 				INFOPLIST_FILE = "Ribbit/Tale Recursion-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "Tale Recursion";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
