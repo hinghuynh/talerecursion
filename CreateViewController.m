@@ -47,6 +47,7 @@
         PFObject *sen = [PFObject objectWithClassName:@"Sentence"];
         sen[@"sentence"] = sentence;
         [sen setObject: tale forKey:@"story"];
+        [sen setObject:[PFUser currentUser] forKey:@"author"];
         [sen saveInBackground];
 
     }

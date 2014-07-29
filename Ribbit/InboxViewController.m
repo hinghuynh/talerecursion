@@ -103,7 +103,6 @@
         }
     }];
     cell.textLabel.text = [message objectForKey:@"title"];
-    cell.detailTextLabel.text = @"1";
     
     return cell;
 }

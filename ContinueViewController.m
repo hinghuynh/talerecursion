@@ -22,7 +22,6 @@
     
     PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
     
-       NSLog(@"THISDJSALKJDASLKDJASLKDJASLDK %@", self.message);
     [postQuery whereKey:@"story" equalTo:self.message];
     
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -31,7 +30,13 @@
             for(PFObject *sentence in objects){
                 self.lastSentence = [sentence objectForKey:@"sentence"];
             }
-            self.previousSentence.text = self.lastSentence;
+            PFObject *last = [objects lastObject];
+            PFObject *author = last[@"author"];
+            NSLog(@"%@", author);
+            [author fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                NSString *name = [NSString stringWithFormat:@"  -written by %@", author[@"username"]];
+                self.previousSentence.text = [self.lastSentence stringByAppendingString:name];
+            }];
         }
     }];
 }
@@ -61,6 +66,7 @@
         PFObject *sen = [PFObject objectWithClassName:@"Sentence"];
         sen[@"sentence"] = sentence;
         [sen setObject: self.message forKey:@"story"];
+        [sen setObject:[PFUser currentUser] forKey:@"author"];
         [sen saveInBackground];
         
         [self.navigationController popToRootViewControllerAnimated:YES];
