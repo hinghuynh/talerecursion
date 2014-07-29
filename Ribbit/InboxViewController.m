@@ -30,7 +30,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:@"Story"];
 //    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
     [query orderByDescending:@"objectId"];
@@ -39,7 +39,7 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
         else {
-            NSMutableArray *array = [[NSMutableArray alloc] init];
+            ;
             for(PFObject *story in objects){
                 PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
                 [postQuery whereKey:@"story" equalTo:story];
@@ -50,17 +50,27 @@
                         NSLog(@"test %d", [array count]);
                     }
                     
-                    if ([objects lastObject] == story){
-                        self.messages = array;
-                        NSLog(@"%d", [array count]);
-                        [self.tableView reloadData];
-                    }
+//                    if ([objects lastObject] == story){
+//                        self.messages = array;
+//                        NSLog(@"%d", [array count]);
+//                        [self.tableView reloadData];
+//                    }
         
                 }];
              
             }
         }
     }];
+    
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        
+        self.messages = array;
+        NSLog(@"%d", [array count]);
+        [self.tableView reloadData];
+    });
+
 }
 
 #pragma mark - Table view data source
