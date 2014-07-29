@@ -93,7 +93,17 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     PFObject *message = [self.messages objectAtIndex:indexPath.row];
+
+    PFQuery *query = [PFQuery queryWithClassName:@"Sentence"];
+    [query whereKey:@"story" equalTo:message];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSUInteger count = 12 - [objects count];
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%d remaining", count];
+        }
+    }];
     cell.textLabel.text = [message objectForKey:@"title"];
+    cell.detailTextLabel.text = @"1";
     
     return cell;
 }
