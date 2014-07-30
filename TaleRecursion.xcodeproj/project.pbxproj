@@ -88,10 +88,10 @@
 		8DCDADAB17A6B3CC008AAA28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8DCDADAD17A6B3CC008AAA28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DCDADAF17A6B3CC008AAA28 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8DCDADB317A6B3CC008AAA28 /* Tale Recursion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tale Recursion-Info.plist"; sourceTree = "<group>"; };
+		8DCDADB317A6B3CC008AAA28 /* TaleRecursion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TaleRecursion-Info.plist"; sourceTree = "<group>"; };
 		8DCDADB517A6B3CC008AAA28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8DCDADB717A6B3CC008AAA28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8DCDADB917A6B3CC008AAA28 /* Tale Recursion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tale Recursion-Prefix.pch"; sourceTree = "<group>"; };
+		8DCDADB917A6B3CC008AAA28 /* TaleRecursion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaleRecursion-Prefix.pch"; sourceTree = "<group>"; };
 		8DCDADBA17A6B3CC008AAA28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DCDADBB17A6B3CC008AAA28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8DCDADBD17A6B3CC008AAA28 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -226,10 +226,10 @@
 		8DCDADB217A6B3CC008AAA28 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8DCDADB317A6B3CC008AAA28 /* Tale Recursion-Info.plist */,
+				8DCDADB317A6B3CC008AAA28 /* TaleRecursion-Info.plist */,
 				8DCDADB417A6B3CC008AAA28 /* InfoPlist.strings */,
 				8DCDADB717A6B3CC008AAA28 /* main.m */,
-				8DCDADB917A6B3CC008AAA28 /* Tale Recursion-Prefix.pch */,
+				8DCDADB917A6B3CC008AAA28 /* TaleRecursion-Prefix.pch */,
 				8DCDADBD17A6B3CC008AAA28 /* Default.png */,
 				8DCDADBF17A6B3CC008AAA28 /* Default@2x.png */,
 				8DCDADC117A6B3CC008AAA28 /* Default-568h@2x.png */,
