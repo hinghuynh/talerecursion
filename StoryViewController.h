@@ -13,6 +13,7 @@
 @interface StoryViewController : UIViewController <AVSpeechSynthesizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *storyLabel;
+
 @property (nonatomic, strong) NSString *message;
 
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;

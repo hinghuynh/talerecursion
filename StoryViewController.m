@@ -26,7 +26,7 @@ BOOL speechPaused = 0;
     
     // --------- SETTING THE BACKGROUND IMAGE -------------
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"final-background.jpg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"final-story-background.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -59,7 +59,7 @@ BOOL speechPaused = 0;
     }
     if (self.synthesizer.speaking == NO) {
         AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:self.storyLabel.text];
-        [utterance setRate:0.15];
+        [utterance setRate:0.14];
         utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-AU"];
         [self.synthesizer speakUtterance:utterance];
     }

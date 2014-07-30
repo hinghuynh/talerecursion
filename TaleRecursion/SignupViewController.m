@@ -21,7 +21,7 @@
     
     // --------- SETTING THE BACKGROUND IMAGE -------------
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"final-background.jpg"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"background.jpg"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

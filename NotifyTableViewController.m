@@ -56,6 +56,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    [[UITableViewCell appearance] setTintColor:[UIColor colorWithRed:0.039 green:0.851 blue:0.882 alpha:1]];
+    
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
     cell.textLabel.text = user.username;
     

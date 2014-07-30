@@ -27,7 +27,10 @@
     
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
+    [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
+    
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.039 green:0.851 blue:0.882 alpha:1]];
+    
     return YES;
 }
 
