@@ -12,6 +12,7 @@
 		005A5D1C19860A0E00088DCB /* FinishedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */; };
 		005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1E19860CA800088DCB /* StoryViewController.m */; };
 		104D911319883C3B00A96F5A /* NotifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D911219883C3B00A96F5A /* NotifyTableViewController.m */; };
+		210C6C4C1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C6C4B1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m */; };
 		215EF3CC1987E8870087EDF1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215EF3CB1987E8870087EDF1 /* AVFoundation.framework */; };
 		21CAA18B1986FD9E008B31E6 /* sampl-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */; };
 		8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */; };
@@ -63,6 +64,8 @@
 		005A5D1E19860CA800088DCB /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryViewController.m; path = ../StoryViewController.m; sourceTree = "<group>"; };
 		104D911119883C3B00A96F5A /* NotifyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotifyTableViewController.h; path = ../NotifyTableViewController.h; sourceTree = "<group>"; };
 		104D911219883C3B00A96F5A /* NotifyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotifyTableViewController.m; path = ../NotifyTableViewController.m; sourceTree = "<group>"; };
+		210C6C4A1988BD5C0032397B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		210C6C4B1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		215EF3CB1987E8870087EDF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sampl-image.jpg"; sourceTree = "<group>"; };
 		8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				8DCDADEF17A82EC7008AAA28 /* SignupViewController.m */,
 				005A5D1D19860CA800088DCB /* StoryViewController.h */,
 				005A5D1E19860CA800088DCB /* StoryViewController.m */,
+				210C6C4A1988BD5C0032397B /* TPKeyboardAvoidingScrollView.h */,
+				210C6C4B1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m */,
 				8DCDADB217A6B3CC008AAA28 /* Supporting Files */,
 			);
 			path = TaleRecursion;
@@ -323,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				210C6C4C1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				8DCDADB817A6B3CC008AAA28 /* main.m in Sources */,
 				8DCDADBC17A6B3CC008AAA28 /* AppDelegate.m in Sources */,
 				005A5D1619856F8A00088DCB /* CreateViewController.m in Sources */,
