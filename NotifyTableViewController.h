@@ -14,7 +14,8 @@
 @property (nonatomic, strong) PFRelation *friendsRelation;
 @property (nonatomic, strong) NSArray *friends;
 @property (nonatomic, strong) NSMutableArray *receivingFriends;
-@property (nonatomic, strong) NSString *checker;
+@property (nonatomic, strong) PFUser *currentUser;
+@property (nonatomic, strong) NSString *storyTitle;
 
 - (IBAction)pushInvites:(id)sender;
 

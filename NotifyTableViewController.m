@@ -16,12 +16,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.receivingFriends = [[NSMutableArray alloc] init];
+    self.currentUser = [PFUser currentUser];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    self.checker = @"unchecked";
     
     self.friendsRelation = [[PFUser currentUser] objectForKey:@"friendsRelation"];
     
@@ -68,25 +68,27 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     PFUser *user = [self.friends objectAtIndex:indexPath.row];
-    NSMutableArray *array = [[NSMutableArray alloc] init];
     
     if ( cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [self.receivingFriends removeObject:[user objectForKey:@"username"]];
-        self.checker = @"unchecked";
-        NSLog(@"test %d", [self.receivingFriends count]);
+        for (PFUser *buddy  in self.receivingFriends) {
+            if ([buddy.objectId isEqualToString:user.objectId]) {
+                [self.receivingFriends removeObject:buddy];
+                break;
+            }
+        }
+    
     }
     else {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [self.receivingFriends insertObject:[user objectForKey:@"username"] atIndex:[self.receivingFriends count]];
-        self.checker = @"checked";
-        NSLog(@"test %d", [self.receivingFriends count]);
-        NSLog(@"%@", [self.receivingFriends firstObject]);
+        [self.receivingFriends insertObject:user atIndex:[self.receivingFriends count]];
     }
+    NSLog(@"test %d", [self.receivingFriends count]);
 }
 
 
 - (IBAction)pushInvites:(id)sender {
+    NSLog(@"notify log %@", self.storyTitle);
     NSLog(@"Receiving friends: %@", self.receivingFriends);
     NSMutableArray *messageList = [[NSMutableArray alloc] init];
     for(PFObject *buddy in self.receivingFriends){
@@ -98,7 +100,8 @@
     PFPush *push = [[PFPush alloc] init];
     // Be sure to use the plural 'setChannels'.
     [push setChannels:channels];
-    [push setMessage:@"The Giants won against the Mets 2-3."];
+    NSString *pushMessage = [NSString stringWithFormat:@"%@ just started a story called '%@' and is requesting your help to finish it!!", [self.currentUser objectForKey:@"username"], self.storyTitle];
+    [push setMessage:pushMessage];
     [push sendPushInBackground];
 }
 @end

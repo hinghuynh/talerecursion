@@ -7,6 +7,7 @@
 //
 
 #import "CreateViewController.h"
+#import "NotifyTableViewController.h"
 
 @interface CreateViewController ()
 
@@ -27,11 +28,12 @@
     [textField resignFirstResponder];
     return NO;
 }
+
 - (IBAction)addSentence:(id)sender {
-    NSString *title = [self.titleField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    self.title = [self.titleField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *sentence = [self.sentenceField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    if ([sentence length] == 0 || [title length] == 0 ) {
+    if ([sentence length] == 0 || [self.title length] == 0 ) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                             message:@"A text field is blank, please enter a title or sentence!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -40,7 +42,7 @@
     else {
         
         PFObject *tale = [PFObject objectWithClassName:@"Story"];
-        [tale setObject: title forKey:@"title"];
+        [tale setObject: self.title forKey:@"title"];
         [tale setObject: [PFUser currentUser] forKey:@"author"];
         [tale saveInBackground];
         
@@ -49,7 +51,19 @@
         [sen setObject: tale forKey:@"story"];
         [sen setObject:[PFUser currentUser] forKey:@"author"];
         [sen saveInBackground];
+        [self performSegueWithIdentifier:@"showFriends" sender:nil];
 
     }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showFriends"]) {
+        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+        NotifyTableViewController *viewController = (NotifyTableViewController *)segue.destinationViewController;
+        viewController.storyTitle = self.title;
+        NSLog(@"title log %@", self.title);
+        NSLog(@"Im here");
+    }
+}
+
 @end

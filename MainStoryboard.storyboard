@@ -207,7 +207,6 @@
                                 </state>
                                 <connections>
                                     <action selector="addSentence:" destination="8IP-jO-Ual" eventType="touchUpInside" id="gic-Xj-cFY"/>
-                                    <segue destination="4i3-uR-Buo" kind="push" id="pyA-xS-jR8"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter the First Sentence" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vJ-rp-gRs">
@@ -229,6 +228,7 @@
                     <connections>
                         <outlet property="sentenceField" destination="7vJ-rp-gRs" id="opF-CR-aM2"/>
                         <outlet property="titleField" destination="ivk-jQ-cJU" id="bNH-qt-Z5I"/>
+                        <segue destination="4i3-uR-Buo" kind="push" identifier="showFriends" id="lGd-zI-2tm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UF-Su-pF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
