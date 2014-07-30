@@ -19,6 +19,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"final-background.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
     self.titleField.delegate = self;
     self.sentenceField.delegate = self;
     self.currentUser = [PFUser currentUser];

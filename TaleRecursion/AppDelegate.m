@@ -11,13 +11,23 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Parse setApplicationId:@"g4hSRDJ17Xefz5PrkyurCXLfRNQtHHt4WxYx2Q12"
                   clientKey:@"KRx9ynZ1wSoHhogGtBjnMjFYm1ioLJCt6hTse4l6"];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:0.031 green:0.965 blue:1 alpha:1], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"sketchy" size:28.0], NSFontAttributeName, nil]];
     
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:0.039 green:0.851 blue:0.882 alpha:1]];
     return YES;
 }
 

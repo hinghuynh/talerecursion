@@ -23,6 +23,16 @@ BOOL speechPaused = 0;
 
 {
     [super viewDidLoad];
+    
+    // --------- SETTING THE BACKGROUND IMAGE -------------
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"final-background.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    // ------------------ END -----------------------------
+    
     self.synthesizer = [[AVSpeechSynthesizer alloc] init];
     speechPaused = NO;
     self.synthesizer.delegate = self;

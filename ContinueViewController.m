@@ -18,6 +18,14 @@
 {
     [super viewDidLoad];
     
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"final-background.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+    
     self.sentenceField.delegate = self;
     
     PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];

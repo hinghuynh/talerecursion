@@ -18,9 +18,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // --------- SETTING THE BACKGROUND IMAGE -------------
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"final-background.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    // ------------------ END -----------------------------
+    
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sampl-image.jpg"]];
+    
 }
 
 - (IBAction)signup:(id)sender {
