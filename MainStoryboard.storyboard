@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hdx-au-269">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hdx-au-269">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-59" y="227"/>
         </scene>
-        <!--Login View Controller - Tale Recursion-->
+        <!--Login View Controller - TaleRecursion-->
         <scene sceneID="jhv-qo-Efw">
             <objects>
                 <viewController id="BA1-Cp-RJu" customClass="LoginViewController" sceneMemberID="viewController">
@@ -107,7 +107,7 @@
                             <constraint firstItem="LtO-lO-faO" firstAttribute="top" secondItem="NRF-Ak-4Dc" secondAttribute="bottom" constant="8" symbolic="YES" id="ygs-IK-S4H"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tale Recursion" id="Xza-Tr-b7l"/>
+                    <navigationItem key="navigationItem" title="TaleRecursion" id="Xza-Tr-b7l"/>
                     <connections>
                         <outlet property="passwordField" destination="LtO-lO-faO" id="rSb-1I-Y0G"/>
                         <outlet property="usernameField" destination="NRF-Ak-4Dc" id="y7s-w5-eCh"/>
@@ -330,7 +330,7 @@
             </objects>
             <point key="canvasLocation" x="1408" y="-947"/>
         </scene>
-        <!--Inbox View Controller - Tale Recursion-->
+        <!--Inbox View Controller - TaleRecursion-->
         <scene sceneID="K2q-hk-Jwk">
             <objects>
                 <tableViewController id="4uG-zQ-ztV" customClass="InboxViewController" sceneMemberID="viewController">
@@ -369,7 +369,7 @@
                             <outlet property="delegate" destination="4uG-zQ-ztV" id="A6l-wn-hxl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tale Recursion" id="ao4-kE-he2">
+                    <navigationItem key="navigationItem" title="TaleRecursion" id="ao4-kE-he2">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="D3W-5L-cIi">
                             <connections>
                                 <action selector="logout:" destination="4uG-zQ-ztV" id="L7V-9m-1y3"/>
@@ -385,7 +385,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-350"/>
         </scene>
-        <!--Signup View Controller - Tale Recursion-->
+        <!--Signup View Controller - TaleRecursion-->
         <scene sceneID="aBP-V4-woW">
             <objects>
                 <viewController id="EZc-59-qKm" customClass="SignupViewController" sceneMemberID="viewController">
@@ -438,7 +438,7 @@
                             <constraint firstItem="jor-yE-8rP" firstAttribute="top" secondItem="Eqo-hT-l2U" secondAttribute="bottom" constant="8" symbolic="YES" id="uuO-Ki-dJf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tale Recursion" id="86g-jc-CQe"/>
+                    <navigationItem key="navigationItem" title="TaleRecursion" id="86g-jc-CQe"/>
                     <connections>
                         <outlet property="emailField" destination="9pk-dW-1XS" id="RaH-Qx-dNZ"/>
                         <outlet property="passwordField" destination="jor-yE-8rP" id="lbk-f3-mru"/>
