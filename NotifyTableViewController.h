@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface NotifyTableViewController : UITableViewController
+
+@property (nonatomic, strong) PFRelation *friendsRelation;
+@property (nonatomic, strong) NSArray *friends;
+@property (nonatomic, strong) NSMutableArray *receivingFriends;
+@property (nonatomic, strong) NSString *checker;
+
+- (IBAction)pushInvites:(id)sender;
 
 @end

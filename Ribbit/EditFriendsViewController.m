@@ -93,7 +93,7 @@
         [self.friends addObject:user];
         [friendsRelation addObject:user];
     }
-    
+    NSLog(@"friend size %d", [self.friends count]);
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error) {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
