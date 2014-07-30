@@ -34,7 +34,7 @@
             PFObject *author = last[@"author"];
             NSLog(@"%@", author);
             [author fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-                NSString *name = [NSString stringWithFormat:@"  -written by %@", author[@"username"]];
+                NSString *name = [NSString stringWithFormat:@"  - %@%@", [[author[@"username"]substringToIndex:1] uppercaseString],[author[@"username"] substringFromIndex:1]];
                 self.previousSentence.text = [self.lastSentence stringByAppendingString:name];
             }];
         }
