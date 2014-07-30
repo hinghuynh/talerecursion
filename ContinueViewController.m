@@ -77,6 +77,7 @@
         [sen setObject:[PFUser currentUser] forKey:@"author"];
         [sen saveInBackground];
         
+        self.sentenceField.text = nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
         
     }

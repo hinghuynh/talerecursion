@@ -60,6 +60,9 @@
         [sen setObject:[PFUser currentUser] forKey:@"author"];
         [sen saveInBackground];
         [self performSegueWithIdentifier:@"showFriends" sender:nil];
+        
+        self.titleField.text  = nil;
+        self.sentenceField.text = nil;
 
     }
 }
