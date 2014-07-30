@@ -13,6 +13,9 @@
 		005A5D1F19860CA800088DCB /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005A5D1E19860CA800088DCB /* StoryViewController.m */; };
 		104D911319883C3B00A96F5A /* NotifyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D911219883C3B00A96F5A /* NotifyTableViewController.m */; };
 		210C6C4C1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C6C4B1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m */; };
+		210C6C4F1988C36D0032397B /* GravatarUrlBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 210C6C4E1988C36D0032397B /* GravatarUrlBuilder.m */; };
+		210C6C521988C3AC0032397B /* icon_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 210C6C501988C3AC0032397B /* icon_person.png */; };
+		210C6C531988C3AC0032397B /* icon_person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210C6C511988C3AC0032397B /* icon_person@2x.png */; };
 		215EF3CC1987E8870087EDF1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215EF3CB1987E8870087EDF1 /* AVFoundation.framework */; };
 		21CAA18B1986FD9E008B31E6 /* sampl-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */; };
 		8D2A01AC17AB0EEE00A43140 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A01A917AB0EEE00A43140 /* EditFriendsViewController.m */; };
@@ -66,6 +69,10 @@
 		104D911219883C3B00A96F5A /* NotifyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotifyTableViewController.m; path = ../NotifyTableViewController.m; sourceTree = "<group>"; };
 		210C6C4A1988BD5C0032397B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		210C6C4B1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		210C6C4D1988C36D0032397B /* GravatarUrlBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravatarUrlBuilder.h; sourceTree = "<group>"; };
+		210C6C4E1988C36D0032397B /* GravatarUrlBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravatarUrlBuilder.m; sourceTree = "<group>"; };
+		210C6C501988C3AC0032397B /* icon_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_person.png; sourceTree = "<group>"; };
+		210C6C511988C3AC0032397B /* icon_person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_person@2x.png"; sourceTree = "<group>"; };
 		215EF3CB1987E8870087EDF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		21CAA18A1986FD9E008B31E6 /* sampl-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sampl-image.jpg"; sourceTree = "<group>"; };
 		8D2A01A817AB0EEE00A43140 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
@@ -197,6 +204,8 @@
 				005A5D1B19860A0E00088DCB /* FinishedTableViewController.m */,
 				8D2A01AA17AB0EEE00A43140 /* FriendsViewController.h */,
 				8D2A01AB17AB0EEE00A43140 /* FriendsViewController.m */,
+				210C6C4D1988C36D0032397B /* GravatarUrlBuilder.h */,
+				210C6C4E1988C36D0032397B /* GravatarUrlBuilder.m */,
 				8DCDADF417A83852008AAA28 /* InboxViewController.h */,
 				8DCDADF517A83852008AAA28 /* InboxViewController.m */,
 				8DCDADF117A82EEB008AAA28 /* LoginViewController.h */,
@@ -238,6 +247,8 @@
 				8DCDADFA17A83870008AAA28 /* friends@2x.png */,
 				8D5ED97917B052130079548F /* icon_image.png */,
 				8D5ED97A17B052130079548F /* icon_image@2x.png */,
+				210C6C501988C3AC0032397B /* icon_person.png */,
+				210C6C511988C3AC0032397B /* icon_person@2x.png */,
 				8D5ED97B17B052130079548F /* icon_video.png */,
 				8D5ED97C17B052130079548F /* icon_video@2x.png */,
 				8DCDADFB17A83870008AAA28 /* inbox.png */,
@@ -308,10 +319,12 @@
 				8DCDADC217A6B3CC008AAA28 /* Default-568h@2x.png in Resources */,
 				8DCDADC917A6BA34008AAA28 /* MainStoryboard.storyboard in Resources */,
 				8DCDADFD17A83870008AAA28 /* camera.png in Resources */,
+				210C6C531988C3AC0032397B /* icon_person@2x.png in Resources */,
 				8DCDADFE17A83870008AAA28 /* camera@2x.png in Resources */,
 				8DCDADFF17A83870008AAA28 /* friends.png in Resources */,
 				8DCDAE0017A83870008AAA28 /* friends@2x.png in Resources */,
 				8DCDAE0117A83870008AAA28 /* inbox.png in Resources */,
+				210C6C521988C3AC0032397B /* icon_person.png in Resources */,
 				8DCDAE0217A83870008AAA28 /* inbox@2x.png in Resources */,
 				21CAA18B1986FD9E008B31E6 /* sampl-image.jpg in Resources */,
 				8D5ED97D17B052130079548F /* icon_image.png in Resources */,
@@ -329,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				210C6C4C1988BD5C0032397B /* TPKeyboardAvoidingScrollView.m in Sources */,
+				210C6C4F1988C36D0032397B /* GravatarUrlBuilder.m in Sources */,
 				8DCDADB817A6B3CC008AAA28 /* main.m in Sources */,
 				8DCDADBC17A6B3CC008AAA28 /* AppDelegate.m in Sources */,
 				005A5D1619856F8A00088DCB /* CreateViewController.m in Sources */,
