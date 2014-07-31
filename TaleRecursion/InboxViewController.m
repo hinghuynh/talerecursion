@@ -20,7 +20,6 @@
     [super viewDidLoad];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
-            NSMutableArray *array = [[NSMutableArray alloc] init];
         NSLog(@"Current user: %@", currentUser.username);
     }
     else {

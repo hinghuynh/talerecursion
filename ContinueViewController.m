@@ -81,10 +81,9 @@
             
             if (!error) {
                 if ([objects count] == @12) {
-                    for (NSString *sentence  in objects) {
-                        
-                        [self.channels insertObject:sentence atIndex:[self.channels count]];
-                        
+                    for (PFObject *sentence  in objects) {
+                        PFUser *user =  [sentence objectForKey:@"author"];
+                        [self.channels insertObject:[user objectForKey:@"username"] atIndex:[self.channels count]];
                     }
                     
                     PFPush *push = [[PFPush alloc] init];
