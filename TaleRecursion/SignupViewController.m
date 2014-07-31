@@ -47,13 +47,27 @@
     NSString *password = [self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *email = [self.emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
+    // ----------- USERNAME (NO SPACES ALLOWED) ----------------
+    
+    NSString *expression = @"^[a-zA-Z0-9-_]+$";
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:&error];
+    
+    NSTextCheckingResult *match = [regex firstMatchInString:username options:0 range:NSMakeRange(0, [username length])];
+    // ---------------------------------------------------------
+    
     if ([username length] == 0 || [password length] == 0 || [email length] == 0) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                             message:@"Make sure you enter a username, password, and email address!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
-    }
-    else {
+    } else if (!match){
+        UIAlertView *noSpace = [[UIAlertView alloc] initWithTitle:@"Username: No spaces allowed"
+                                                          message:@"Try again!"
+                                                         delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [noSpace show];
+        
+    } else {
         PFUser *newUser = [PFUser user];
         newUser.username = username;
         newUser.password = password;

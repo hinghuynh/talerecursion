@@ -25,6 +25,8 @@
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"sketchy" size:28.0], NSFontAttributeName, nil]];
     
+    [[UITextField appearance] setTintColor:[UIColor colorWithRed:0.11 green:0.773 blue:0.796 alpha:1]];
+    
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
     [[UITabBar appearance] setBarTintColor:[UIColor blackColor]];
