@@ -76,12 +76,20 @@
         [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             
             if (!error) {
-                if ([objects count] - 12 == 0) {
+                if ([objects count] - 2 == 0) {
+                    
                     NSLog(@"I AM IN THE FINISHING PUSH");
-                    for (PFObject *sentence  in objects) {
+                    
+                    for (PFObject *sentence in objects) {
                         PFUser *user =  [sentence objectForKey:@"author"];
+                        if ([self.channels count] > 0) {
+                            for (PFObject *person in self.channels) {
+                                if ([person objectForKey:@"objectId"] != [user objectForKey:@"objectId"]) {
                         [self.channels insertObject:[user objectForKey:@"username"] atIndex:[self.channels count]];
                         NSLog(@"this username should receieve message %@", [user objectForKey:@"username"]);
+                                }
+                            }
+                        }
                     }
                     
                     NSLog(@"This is an array %@", self.channels);
@@ -92,7 +100,6 @@
                     [push sendPushInBackground];
                 }
             }
-            
             
             
         }];
