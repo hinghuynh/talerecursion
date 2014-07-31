@@ -67,17 +67,37 @@
         [alertView show];
     }
     else {
-        
-//        PFObject *tale = [PFObject objectWithClassName:@"Story"];
-//        [tale setObject: title forKey:@"title"];
-//        [tale setObject: [PFUser currentUser] forKey:@"author"];
-//        [tale saveInBackground];
-        
+
         PFObject *sen = [PFObject objectWithClassName:@"Sentence"];
         sen[@"sentence"] = sentence;
         [sen setObject: self.message forKey:@"story"];
         [sen setObject:[PFUser currentUser] forKey:@"author"];
         [sen saveInBackground];
+        
+        
+        PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
+        [postQuery whereKey:@"story" equalTo:self.message];
+        [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            
+            if (!error) {
+                if ([objects count] == @12) {
+                    for (NSString *sentence  in objects) {
+                        
+                        [self.channels insertObject:sentence atIndex:[self.channels count]];
+                        
+                    }
+                    
+                    PFPush *push = [[PFPush alloc] init];
+                    [push setChannels:self.channels];
+                    NSString *pushMessage = [NSString stringWithFormat:@" The story called '%@' has just been finished, please login in Tale Recursion to read the finished story.", self.message];
+                    [push setMessage:pushMessage];
+                    [push sendPushInBackground];
+                }
+            }
+            
+            
+            
+        }];
         
         self.sentenceField.text = nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
