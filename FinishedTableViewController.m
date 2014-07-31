@@ -27,7 +27,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:@"Story"];
     //    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
-    [query orderByDescending:@"objectId"];
+    [query orderByAscending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error: %@ %@", error, [error userInfo]);

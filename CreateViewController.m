@@ -38,10 +38,10 @@
 }
 
 - (IBAction)addSentence:(id)sender {
-    self.title = [self.titleField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    self.storyTitle = [self.titleField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *sentence = [self.sentenceField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    if ([sentence length] == 0 || [self.title length] == 0 ) {
+    if ([sentence length] == 0 || [self.storyTitle length] == 0 ) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                             message:@"A text field is blank, please enter a title or sentence!"
                                                            delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -50,7 +50,7 @@
     else {
         
         PFObject *tale = [PFObject objectWithClassName:@"Story"];
-        [tale setObject: self.title forKey:@"title"];
+        [tale setObject: self.storyTitle forKey:@"title"];
         [tale setObject: [PFUser currentUser] forKey:@"author"];
         [tale saveInBackground];
         
@@ -71,8 +71,8 @@
     if ([segue.identifier isEqualToString:@"showFriends"]) {
         [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
         NotifyTableViewController *viewController = (NotifyTableViewController *)segue.destinationViewController;
-        viewController.storyTitle = self.title;
-        NSLog(@"title log %@", self.title);
+        viewController.storyTitle = self.storyTitle;
+        NSLog(@"title log %@", self.storyTitle);
         NSLog(@"Im here");
     }
 }

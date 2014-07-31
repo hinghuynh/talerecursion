@@ -31,9 +31,15 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationItem.hidesBackButton = YES;
     
+    self.usernameField.delegate = self;
+    self.passwordField.delegate = self;
+    
 }
 
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
 
 - (IBAction)login:(id)sender {
     NSString *username = [self.usernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

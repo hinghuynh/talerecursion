@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSArray *messages;
 @property (nonatomic, strong) PFObject *selectedMessage;
+@property (nonatomic, strong) NSMutableArray *array;
 
 - (IBAction)logout:(id)sender;
 

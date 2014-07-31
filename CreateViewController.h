@@ -14,7 +14,7 @@
 @property (nonatomic, strong) PFUser *currentUser;
 @property (strong, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextField *sentenceField;
-@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *storyTitle;
 
 - (IBAction)addSentence:(id)sender;
 

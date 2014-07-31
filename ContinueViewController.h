@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *lastSentence;
 @property (nonatomic, strong) NSArray *allSentences;
 @property (nonatomic, strong) PFObject *message;
-//@property (nonatomic, strong) PFObject *story;
+@property (nonatomic, strong) NSMutableArray *channels;
 @property (strong, nonatomic) IBOutlet UILabel *previousSentence;
 @property (strong, nonatomic) IBOutlet UITextField *sentenceField;
 

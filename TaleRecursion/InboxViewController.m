@@ -20,6 +20,7 @@
     [super viewDidLoad];
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
+        self.array = [[NSMutableArray alloc] init];
         NSLog(@"Current user: %@", currentUser.username);
     }
     else {
@@ -29,36 +30,33 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     PFUser *currentUser = [PFUser currentUser];
     NSString *userChannel = (@"%@", currentUser.username);
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation addUniqueObject:userChannel forKey:@"channels"];
     [currentInstallation saveInBackground];
-    NSMutableArray *array = [[NSMutableArray alloc] init];
+
     PFQuery *query = [PFQuery queryWithClassName:@"Story"];
-//    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
-    [query orderByDescending:@"objectId"];
+    
+    [query orderByAscending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
         else {
             ;
+            
+            [self.array removeAllObjects];
             for(PFObject *story in objects){
                 PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
                 [postQuery whereKey:@"story" equalTo:story];
                 [postQuery findObjectsInBackgroundWithBlock:^(NSArray *sentences, NSError *error) {
 
                     if ([sentences count] < 12){
-                        [array insertObject:story atIndex:[array count]];
-                        NSLog(@"test %d", [array count]);
+                        [self.array insertObject:story atIndex:[self.array count]];
+                        NSLog(@"test %d", [self.array count]);
                     }
-                    
-//                    if ([objects lastObject] == story){
-//                        self.messages = array;
-//                        NSLog(@"%d", [array count]);
-//                        [self.tableView reloadData];
-//                    }
         
                 }];
              
@@ -66,14 +64,9 @@
         }
     }];
     
-    double delayInSeconds = 1.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        
-        self.messages = array;
-        NSLog(@"%d", [array count]);
+        self.messages = self.array;
+        NSLog(@"%d", [self.array count]);
         [self.tableView reloadData];
-    });
 
 }
 

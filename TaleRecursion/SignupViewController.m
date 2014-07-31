@@ -31,6 +31,15 @@
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
     
+    self.usernameField.delegate = self;
+    self.passwordField.delegate = self;
+    self.emailField.delegate = self;
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (IBAction)signup:(id)sender {
