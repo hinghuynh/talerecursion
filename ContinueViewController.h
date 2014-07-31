@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSMutableArray *channels;
 @property (strong, nonatomic) IBOutlet UILabel *previousSentence;
 @property (strong, nonatomic) IBOutlet UITextField *sentenceField;
+@property (strong, nonatomic) NSString *name;
 
 - (IBAction)addSentence:(id)sender;
 

@@ -106,7 +106,10 @@
     NSString *pushMessage = [NSString stringWithFormat:@"%@ just started a story called '%@' and is requesting your help to finish it!!", [self.currentUser objectForKey:@"username"], self.storyTitle];
     [push setMessage:pushMessage];
     [push sendPushInBackground];
+    UINavigationController *nav = self.navigationController;
+    [nav popToRootViewControllerAnimated:YES];
 }
+
 @end
 
 

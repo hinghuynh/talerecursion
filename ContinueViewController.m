@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.name = [[NSString alloc] init];
     self.channels = [[NSMutableArray alloc] init];
     
     UIGraphicsBeginImageContext(self.view.frame.size);
@@ -71,38 +71,49 @@
         [sen saveInBackground];
         
         
-        PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
-        [postQuery whereKey:@"story" equalTo:self.message];
-        [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            
-            if (!error) {
-                if ([objects count] - 2 == 0) {
-                    
-                    NSLog(@"I AM IN THE FINISHING PUSH");
-                    
-                    for (PFObject *sentence in objects) {
-                        PFUser *user =  [sentence objectForKey:@"author"];
-                        if ([self.channels count] > 0) {
-                            for (PFObject *person in self.channels) {
-                                if ([person objectForKey:@"objectId"] != [user objectForKey:@"objectId"]) {
-                        [self.channels insertObject:[user objectForKey:@"username"] atIndex:[self.channels count]];
-                        NSLog(@"this username should receieve message %@", [user objectForKey:@"username"]);
-                                }
-                            }
-                        }
-                    }
-                    
-                    NSLog(@"This is an array %@", self.channels);
-                    PFPush *push = [[PFPush alloc] init];
-                    [push setChannels:self.channels];
-                    NSString *pushMessage = [NSString stringWithFormat:@" The story called '%@' has just been finished, please login in Tale Recursion to read the finished story.", self.message];
-                    [push setMessage:pushMessage];
-                    [push sendPushInBackground];
-                }
-            }
-            
-            
-        }];
+//        PFQuery *postQuery = [PFQuery queryWithClassName:@"Sentence"];
+//        [postQuery whereKey:@"story" equalTo:self.message];
+//        [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//            
+//            if (!error) {
+//                if ([objects count] - 12 == 0) {
+//                    
+//                    NSLog(@"I AM IN THE FINISHING PUSH");
+//                    
+//                   
+//                    
+//                    for (PFObject *sentence in objects) {
+//                        PFObject *user = [sentence objectForKey:@"author"];
+//                        [user fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//                        self.name = [user objectForKey:@"username"];
+//                        NSLog(@"%@", self.name);
+//                        }];
+//
+//                        if ([self.channels count] == 0) {
+//                            [self.channels insertObject:self.name atIndex:[self.channels count]];
+//                            NSLog(@"this username should receieve message %@", self.name);
+//                        }
+//                        else {
+//                            for (PFObject *person in self.channels) {
+//                                if ([person objectForKey:@"objectId"] != [user objectForKey:@"objectId"]) {
+//                                    [self.channels insertObject:self.name atIndex:[self.channels count]];
+//                                    NSLog(@"this username should receieve message %@", self.name);
+//                                }
+//                            }
+//                        }
+//                    }
+//                    
+//                    NSLog(@"This is an array on the continue page %@", self.channels);
+//                    PFPush *push = [[PFPush alloc] init];
+//                    [push setChannels:self.channels];
+//                    NSString *pushMessage = [NSString stringWithFormat:@" The story called '%@' has just been finished, please login in Tale Recursion to read the finished story.", self.message];
+//                    [push setMessage:pushMessage];
+//                    [push sendPushInBackground];
+//                }
+//            }
+//            
+//            
+//        }];
         
         self.sentenceField.text = nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
