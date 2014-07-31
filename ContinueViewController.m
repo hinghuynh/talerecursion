@@ -80,12 +80,15 @@
         [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             
             if (!error) {
-                if ([objects count] == @12) {
+                if ([objects count] - 12 == 0) {
+                    NSLog(@"I AM IN THE FINISHING PUSH");
                     for (PFObject *sentence  in objects) {
                         PFUser *user =  [sentence objectForKey:@"author"];
                         [self.channels insertObject:[user objectForKey:@"username"] atIndex:[self.channels count]];
+                        NSLog(@"this username should receieve message %@", [user objectForKey:@"username"]);
                     }
                     
+                    NSLog(@"This is an array %@", self.channels);
                     PFPush *push = [[PFPush alloc] init];
                     [push setChannels:self.channels];
                     NSString *pushMessage = [NSString stringWithFormat:@" The story called '%@' has just been finished, please login in Tale Recursion to read the finished story.", self.message];
