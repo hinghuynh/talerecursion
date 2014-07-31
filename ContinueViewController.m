@@ -37,16 +37,12 @@
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             self.allSentences = objects; // Store results
-          
             PFObject *last = [objects firstObject];
-             self.lastSentence = [last objectForKey:@"sentence"];
-            PFObject *author = last[@"author"];
-            NSLog(@"%@", author);
-            
-            [author fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-                NSString *name = [NSString stringWithFormat:@"  - %@%@", [[author[@"username"]substringToIndex:1] uppercaseString],[author[@"username"] substringFromIndex:1]];
-                self.previousSentence.text = [self.lastSentence stringByAppendingString:name];
-            }];
+            self.lastSentence = [last objectForKey:@"sentence"];
+//            PFObject *author = [last objectForKey:@"author"];
+//            NSLog(@"%@", author);
+//            NSString *name = [NSString stringWithFormat:@"  - %@", [author objectForKey:@"username"]];
+            self.previousSentence.text = self.lastSentence;
         }
     }];
 }

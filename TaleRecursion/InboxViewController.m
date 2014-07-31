@@ -37,7 +37,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:@"Story"];
     
-    [query orderByDescending:@"objectId"];
+    [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -51,7 +51,6 @@
 
                     if ([sentences count] < 12){
                         [array insertObject:story atIndex:[array count]];
-                        NSLog(@"test %d", [array count]);
                     }
         
                 }];
@@ -65,7 +64,6 @@
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         
         self.messages = array;
-        NSLog(@"%d", [array count]);
         [self.tableView reloadData];
     });
 
