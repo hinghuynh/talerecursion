@@ -1,8 +1,9 @@
 //
 //  GravatarUrlBuilder.h
-//  Ribbit
+//  TaleRecursion
 //
-//  Copyright (c) 2013 Treehouse. All rights reserved.
+//  Created by Hing Huynh on 7/28/14.
+//  Copyright (c) 2014 Appcoders. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
